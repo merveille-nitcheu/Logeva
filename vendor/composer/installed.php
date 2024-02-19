@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '1886b1aedf494d4a920af71fc457266e0cc9d0f2',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -332,12 +332,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '1886b1aedf494d4a920af71fc457266e0cc9d0f2',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -347,6 +347,15 @@
             'install_path' => __DIR__ . '/../laravel/tinker',
             'aliases' => array(),
             'reference' => '58424c24e8aec31c3a3ac54eb3adb15e8a0a067b',
+            'dev_requirement' => false,
+        ),
+        'laravel/ui' => array(
+            'pretty_version' => 'v1.3.0',
+            'version' => '1.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/ui',
+            'aliases' => array(),
+            'reference' => '21dc7e58896db977aad246e710b4810aaab9a968',
             'dev_requirement' => false,
         ),
         'laravelcollective/html' => array(

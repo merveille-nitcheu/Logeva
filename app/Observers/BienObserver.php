@@ -11,7 +11,6 @@ class BienObserver
     
     public function creating(Bien $bien){
         $bien->slug = Bien::slugExist(Str::random(10));
-        $bien->id_proprietaire = 1;
     }
 
 

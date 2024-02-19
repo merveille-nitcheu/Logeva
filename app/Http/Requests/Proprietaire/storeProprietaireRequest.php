@@ -27,7 +27,7 @@ class storeProprietaireRequest extends FormRequest
             'nom'=>'required',
             'login'=>'required',
             'email'=>'required|email',
-           'telephone'=>'required||min:9|numeric',
+            'telephone'=>'required|min:9|numeric',
             'password'=>'required|confirmed',
             'password_confirmation'=>'required_with:password',
         ];

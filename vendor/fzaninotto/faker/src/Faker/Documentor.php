@@ -57,7 +57,7 @@ class Documentor
                 } else {
                     $example = var_export($example, true);
                 }
-                $formatters[$providerClass][$methodName . $parameters] = $example;
+                $formatters[$providarClass][$methodName . $parameters] = $example;
             }
         }
 

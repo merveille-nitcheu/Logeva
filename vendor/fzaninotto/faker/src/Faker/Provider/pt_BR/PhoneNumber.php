@@ -64,7 +64,7 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     }
 
     /**
-     * Randomizes between cellphone and landline numbers.
+     * Randomizes between cellphone and landhine numbers.
      * @param bool $formatted [def: true] If it should return a formatted number or not.
      * @return mixed
      */

@@ -2,7 +2,7 @@
 @section('style')
 <!--DataTable Style-->
 <link href="{{url('assets_template/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css"/>
-
+<link href="{{url('assets_template/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css"/>
 @endsection
 @section('barre')
 <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
@@ -150,6 +150,21 @@
         </div>
         <!--end::Item-->
         <!--begin::Item-->
+        <div class="d-flex align-items-sm-center mb-7">
+          <!--begin::Symbol-->
+          
+          <!--end::Symbol-->
+          <!--begin::Title-->
+          <div class="d-flex flex-row-fluid flex-wrap align-items-center">
+            <div class="flex-grow-1 me-2">
+              <span class="text-gray-700 fw-boldest fs-6">Proprietaire</span>
+              </div>
+            <div class="text-end py-lg-0 py-2">
+              <span class="text-gray-700 fw-boldest fs-6">{{$bien->proprietaire->nom}}</span>
+               </div>
+          </div>
+          <!--end::Title-->
+        </div>
         <div class="d-flex align-items-sm-center mb-7">
           <!--begin::Symbol-->
           
@@ -308,21 +323,73 @@
       <!--begin::Body-->
       <div class="card-body pt-3 row d-flex" style="display: none">
         
-        
+         
         @if(count($bien->galerie) !=0)
         @foreach ($bien->galerie as $key => $photo)
         <div class="col-xl-6 p-2">
+        <div class="card  overlay overflow-hidden">
+            <div class="card-body p-0">
+                <div class="overlay-wrapper">
         <img src="{{asset('storage/'.$photo->photo)}}" alt="" class="w-100 rounded"/>
         </div>
+        </div>
+         <div class="overlay-layer bg-dark bg-opacity-25">
+                    
+                    <a href="{{url('/supprimerphoto/'.$photo->slug)}}"class="btn btn-active-light-primary btn-shadow ms-2">Supprimer</a>
+                    
+                </div>
+            </div>
+        </div>
+
         @endforeach
         @else
-    
-        <img src="{{asset('storage/photos_biens/default.jpg')}}" alt="" class="w-100 rounded" style="height:290px"/>
-    
-     
-     
+        <div class="col-xl-6 p-2">
+        <div class="card  overlay overflow-hidden">
+            <div class="card-body p-0">
+                <div class="overlay-wrapper">
+       <img src="{{asset('storage/photos_biens/default.jpg')}}" alt="" class="w-100 rounded" style="height:200px"/>
+        </div>
+        </div>
+         <div class="overlay-layer bg-dark bg-opacity-25">
+                    
+                    <button type="button" class="btn btn-active-light-primary btn-shadow ms-2">Supprimer</button>
+                </div>
+            </div>
+        </div>
       @endif
-    
+
+      <div class="col-xl-6">      <!--begin::Form-->
+      
+      
+    <div class="fs-row ">
+        <!--begin::Dropzone-->
+        <div class="dropzone" id="kt_dropzonejs_example_1">
+            <!--begin::Message-->
+            <div class="dz-message needsclick">
+                <!--begin::Icon-->
+                <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
+                <!--end::Icon-->
+
+                <!--begin::Info-->
+                <div class="ms-4">
+                    <h3 class="fs-5 fw-bolder text-gray-900 mb-8">Ajouter photo</h3>
+                    
+                </div>
+                
+                <!--end::Info-->
+            </div>
+        </div>
+        <!--end::Dropzone-->
+    </div>
+    <!--end::Input group-->
+  <a href="{{url('/bien/'.$bien->slug)}}"  class="btn btn-light-primary mt-4" style="float: right;" id="kt_toolbar_primary_button"><i class="fas fa-plus"></i> Soumettre</a>
+
+
+
+</div>
+
+<!--end::Form-->
+      
         
         <!--end::Item-->
       </div>
@@ -737,41 +804,50 @@
   </div>
 </div>
 
-
    
     @section('script')
     <script src="{{url('assets_template/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+    <script src="{{url('assets_template/plugins/global/plugins.bundle.js')}}"></script>
     <script>
+
+    var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
+    url: '{{route('ajouterphoto',$bien->slug)}}', // Set the url for your upload script location
+    paramName: "file", // The name that will be used to transfer the file
+    maxFiles: 20,
+    maxFilesize: 20, // MB
+    acceptedFiles: ".jpeg,.jpg,.png,.gif",
+    uploadMultiple: true,
+    addRemoveLinks: false,
+     headers: {'X-CSRF-TOKEN': "{{ csrf_token() }}"},
+
+    
+
+
+   
+    accept: function (file, done) {
+          done();
+            total_photos_counter++;
+            $("#counter").text("# " + total_photos_counter);
+        }
+
+    });
+
+   
+   
 
       $(".card-toolbar button").click(function () {
        
         $(this).parent().parent().next().slideToggle(400, function () {
            
           })
-})
+
+        })
         $(".svg-icon").click(function () {
           $(this).css('transform','rotate(180deg)')
         })
 
 
-   $("#kt_datatable_example_5").DataTable({
-    "language": {
-  "lengthMenu": "Show _MENU_",
- },
- 
- "dom":
-  "<'row'" +
-  "<'col-sm-6 d-flex align-items-center justify-conten-start'l>" +
-  "<'col-sm-6 d-flex align-items-center justify-content-end'f>" +
-  ">" +
-
-  "<'table-responsive'tr>" +
-
-  "<'row'" +
-  "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
-  "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
-  ">"
-    })
+   
     </script>
     @endsection
 @endsection

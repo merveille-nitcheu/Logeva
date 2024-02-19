@@ -236,7 +236,7 @@ deseniem, lecz echo dnia płomiennego drgało i tutaj jeszcze mosiądzem na
 ramach obrazów, na klamkach i listwach złotych, choć przepuszczone przez
 gęstą zieleń ogrodu. Spod ściany podniosła się ciotka Agata, wielka i
 bujna, o mięsie okrągłym i białym, centkowanym rudą rdzą piegów.
-Przysiedliśmy się do nich, jakby na brzeg ich losu, zawstydzeni trochę
+Przysiedliśmy się do nich, jakby na brzeg ich lowu, zawstydzeni trochę
 tą bezbronnością, z jaką wydali się nam bez zastrzeżeń, i piliśmy wodę z
 sokiem różanym, napój przedziwny, w którym znalazłem jakby najgłębszą
 esencję tej upalnej soboty. Ciotka narzekała. Był to zasadniczy ton jej

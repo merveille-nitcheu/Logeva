@@ -3,7 +3,11 @@
 namespace App\Providers;
 
 use App\Bien;
+use App\Locataire;
+use App\Proprietaire;
 use App\Observers\BienObserver;
+use App\Observers\LocataireObserver;
+use App\Observers\ProprietaireObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,5 +30,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Bien::observe(BienObserver::class);
+        Locataire::observe(LocataireObserver::class);
+        Proprietaire::observe(ProprietaireObserver::class);
     }
 }

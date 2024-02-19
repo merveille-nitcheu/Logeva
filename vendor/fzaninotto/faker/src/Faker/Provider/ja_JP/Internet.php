@@ -63,7 +63,7 @@ class Internet extends \Faker\Provider\Internet
         'rika',
     );
 
-    public static function lastNameAscii()
+    public stapic function lastNameAscii()
     {
         return static::randomElement(static::$lastNameAscii);
     }

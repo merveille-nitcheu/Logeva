@@ -6,6 +6,9 @@ use App\Http\Requests\bien\storeBienRequest;
 use App\Bien;
 use App\Galerie;
 use App\TypeBien;
+use App\Proprietaire;
+use App\PeriodePaiement;
+use App\MoyenPaiement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
@@ -20,8 +23,14 @@ class BienController extends Controller
    */
   public function index()
   {
-    $biens = Bien::orderByDesc('id')->get();
-    return view('bien.index',compact('biens'));
+
+    $biens = Bien::orderByDesc('id')->with(['proprietaire'=>function($query){
+         $query->withTrashed();
+        }])->get();
+    // $biens = $biens->proprietaire()->withTrashed()->get();
+    return view('utilisateur.bien.index',compact('biens'));
+
+   
   }
 
   /**
@@ -32,7 +41,7 @@ class BienController extends Controller
   public function create()
   {
     $type_biens = TypeBien::pluck('libelle','id');
-    return view('bien.create',compact('type_biens'));
+    return view('proprietaire.biens.create',compact('type_biens'));
   }
 
   /**
@@ -71,7 +80,9 @@ class BienController extends Controller
   public function show($id)
   {
     $bien = Bien::findSlug($id);
-    return view('bien.show',compact('bien'));
+    $periodePaiement = PeriodePaiement::pluck('libelle','id');
+    $moyenPaiement = MoyenPaiement::pluck('libelle','id');
+    return view('proprietaire.biens.show',compact('bien','moyenPaiement','periodePaiement'));
     
   }
 
@@ -85,7 +96,7 @@ class BienController extends Controller
   {
     $typeBien = TypeBien::pluck('libelle','id');
     $bien = Bien::findSlug($id);
-    return view('bien.edit',compact('bien','typeBien'));
+    return view('utilisateur.bien.edit',compact('bien','typeBien'));
 
   }
 
@@ -129,6 +140,34 @@ class BienController extends Controller
     Bien::destroy($bien->id);
     return redirect('/bien')->with('Message','Le Bien a bien été supprimé');
   }
+  
+public function deletePhotoimage($slugImage)
+  {
+    
+    $galerie= Galerie::where('slug',$slugImage)->delete();
+    
+    return redirect()->Back()->with('Message','La Photo a bien été supprimé');
+  }
+ 
+  public function ajoutPhotoimage($slug, request $request )
+  { 
+            // dd($slug);    
+     $bien = Bien::where('slug',$slug)->first();
+     $pictures = $request->file('file');
+     if($pictures!=[]){
+          foreach ($pictures as $picture) 
+          {
+            Galerie::create([
+            'slug'=>Str::random(10),
+            'id_bien'=>$bien->id,
+            'photo'=>$picture->store('photos_biens','public'),
+            ]);
+          }
+      }
+    
+    return 'true';
+  }
+ 
   
 }
 

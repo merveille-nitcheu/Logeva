@@ -19,7 +19,7 @@ class Location extends Model
 
     public function bien()
     {
-        return $this->belongsTo('App\Bien', 'id_location');
+        return $this->belongsTo('App\Bien', 'id_bien');
     }
 
     public function periodePaiement()

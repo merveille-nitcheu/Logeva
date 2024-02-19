@@ -91,7 +91,7 @@ class Person extends \Faker\Provider\Person
     
     /**
      * Generate a Documento Nacional de Identidad (DNI) number
-     *
+  $  *
      * Doesn't include a checksum, as peruvians commonly use only the first
      * 8 digits.
      *

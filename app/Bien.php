@@ -17,6 +17,7 @@ class Bien extends Model
 
     protected $dates = ['deleted_at'];
     protected $fillable = array('slug', 'id_typeBien', 'id_proprietaire', 'nom', 'nombre_piece', 'surface', 'adresse', 'ville', 'pays', 'code_postal', 'description', 'centre_imposition', 'nombre_lot', 'nombre_batiment', 'nombre_etage', 'nombre_escalier', 'numero_porte', 'zone_stationnement', 'garage', 'cave', 'autres_dependance', 'gardiennage', 'interphone', 'ascenseur', 'vide_ordure', 'espaces_vert', 'chauffage_collectif', 'eau_chaude_collective', 'antenne_tv_collective', 'autre_elements_collectif');
+
     protected $visible = array('slug', 'id_typeBien', 'id_proprietaire', 'nom', 'nombre_piece', 'surface', 'adresse', 'ville', 'pays', 'code_postal', 'description', 'centre_imposition', 'nombre_lot', 'nombre_batiment', 'nombre_etage', 'nombre_escalier', 'numero_porte', 'zone_stationnement', 'garage', 'cave', 'autres_dependance', 'gardiennage', 'interphone', 'ascenseur', 'vide_ordure', 'espaces_vert', 'chauffage_collectif', 'eau_chaude_collective', 'antenne_tv_collective', 'autre_elements_collectif');
 
     public function typeBien()

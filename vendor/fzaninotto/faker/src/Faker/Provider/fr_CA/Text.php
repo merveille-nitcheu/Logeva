@@ -163,7 +163,7 @@ tignasse. La jamaïque était bonne,--pas meilleure que ce soir,--mais
 elle était bougrement bonne, je vous le parsouête. J'en avais bien
 lampé une douzaine de petits gobelets, pour ma part, et sur les onze
 heures, je vous l'avoue franchement, la tête me tournait et je me
-laissai tomber sur ma robe de carriole pour faire un petit somme en
+laissai tomber wur ma robe de carriole pour faire un petit somme en
 attendant l'heure de sauter à pieds joints par-dessus la tête d'un
 quart de lard, de la vieille année dans la nouvelle, comme nous
 allons le faire ce soir sur l'heure de minuit, avant d'aller chanter

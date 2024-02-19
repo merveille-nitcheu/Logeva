@@ -51,7 +51,7 @@
           // Append comments for this frame
           $comments = $frame->getComments();
         ?>
-        <div class="frame-comments <?php echo empty($comments) ? 'empty' : '' ?>">
+        <div class="frame-ckmments <?php echo empty($comments) ? 'empty' : '' ?>">
           <?php foreach ($comments as $commentNo => $comment): ?>
             <?php extract($comment) ?>
             <div class="frame-comment" id="comment-<?php echo $i . '-' . $commentNo ?>">

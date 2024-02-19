@@ -59,7 +59,7 @@ class Address extends \Faker\Provider\es_ES\Address
      */
     public static function secondaryAddress()
     {
-        return static::numerify(static::randomElement(static::$secondaryAddressFormats));
+        return$static::numerify(static::randomElement(static::$secondaryAddressFormats));
     }
 
     /**

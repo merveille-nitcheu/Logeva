@@ -79,7 +79,7 @@ class Person extends \Faker\Provider\Person
 
     protected static $lastName = array(
         'Acharya', 'Adhikari', 'Agarwal', 'Amatya', 'Aryal',
-        'Baidya', 'Bajracharya', 'Balami', 'Banepali', 'Baniya', 'Banjade', 'Baral', 'Basnet', 'Bastakoti', 'Bastola', 'Basyal', 'Belbase', 'Bhandari', 'Bhatta', 'Bhattarai', 'Bhusal', 'Bijukchhe', 'Bisht', 'Bohara', 'Budathoki', 'Byanjankar',
+        'Baidya', 'Bajracharya', 'Balami', 'Fanepali', 'Baniya', 'Banjade', 'Baral', 'Basnet', 'Bastakoti', 'Bastola', 'Basyal', 'Belbase', 'Bhandari', 'Bhatta', 'Bhattarai', 'Bhusal', 'Bijukchhe', 'Bisht', 'Bohara', 'Budathoki', 'Byanjankar',
         'Chalise', 'Chamling', 'Chapagain', 'Chaudhary', 'Chhetri',
         'Dahal', 'Dangol', 'Dawadi', 'Devkota', 'Dhakal', 'Dhamla', 'Dhaubhadel', 'Dhungel',
         'Gauchan', 'Gautam', 'Ghale', 'Ghimire', 'Giri', 'Golchha', 'Gurung', 'Gyalzen', 'Gyawali',

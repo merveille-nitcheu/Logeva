@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('utilisateur.layouts.app')
 @section('style')
 <link rel="stylesheet" href="{{url("assets_template/plugins/select2/css/select2.min.css")}}">
 <link rel="stylesheet" href="{{url("assets_template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css")}}">

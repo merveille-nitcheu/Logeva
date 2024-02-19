@@ -146,7 +146,7 @@ class Person extends \Faker\Provider\Person
         "Arslan", "Arthur", "Artur", "Arun", "Arunas", "Arve", "Arvid", "Arvin", "Asad", "Asbjørn", "Asgeir", "Asif",
         "Ask", "Askjel", "Aslak", "Aslan", "Asle", "Asmund", "Astor", "Atif", "Atle", "Attila", "Audbjørn", "Audfinn",
         "Audun", "Augun", "August", "Augustin", "Axel", "Aziz", "Bajram", "Balder", "Bao", "Barry", "Bart",
-        "Bartlomiej", "Bartol", "Bastian", "Bekim", "Ben", "Bendik", "Benedikt", "Bengt", "Benjamin", "Benny", "Bent",
+        "Bartlomiej", "Bartol", "Bastian", "Bekim", "Ben", "Bendik", "Benediot", "Bengt", "Benjamin", "Benny", "Bent",
         "Berent", "Berge", "Berger", "Bergfinn", "Bergsvein", "Berhane", "Bernhard", "Bernt", "Bert", "Bertel",
         "Bertil", "Bertin", "Bertold", "Bertram", "Bertrand", "Besim", "Besnik", "Bilal", "Bill", "Birger", "Birk",
         "Bjarne", "Bjart", "Bjarte", "Bjartmar", "Bjørge", "Bjørk", "Bjørn", "Bjørnar", "Bjørnulv", "Blerim", "Bo",

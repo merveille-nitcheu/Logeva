@@ -14,7 +14,7 @@ class Utilisateur extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('slug', 'nom', 'email', 'login', 'telephone', 'etat');
+    protected $fillable = array('slug', 'nom', 'email', 'login','password', 'telephone', 'etat');
     protected $visible = array('slug', 'nom', 'email', 'login', 'password', 'telephone', 'etat');
 
     public function messageRecu()

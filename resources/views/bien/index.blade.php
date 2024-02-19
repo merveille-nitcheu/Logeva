@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('proprietaire.layouts.app')
 @section('style')
 <!--DataTable Style-->
 <link href="{{url('assets_template/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css"/>
@@ -9,17 +9,21 @@
     <!--begin::Page title-->
     <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
         <!--begin::Title-->
-        <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Biens</h1>
+        <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1"> Mes Biens</h1>
         <!--end::Title-->
         <!--begin::Separator-->
         <span class="h-20px border-gray-200 border-start mx-4"></span>
        
     </div>
     
-        <a href="{{url('bien/create')}}" class="btn btn-light-primary"  id="kt_toolbar_primary_button"><i class="fas fa-plus"></i>Ajouter un Bien</a>
+     </div>
     
+        <a href="{{route('bien.create')}}" class="btn btn-light-primary"  id="kt_toolbar_primary_button"><i class="fas fa-plus"></i>Ajouter un Bien</a>
+    
+</div> 
 </div>
 @endsection
+
 @section('content')
 <section class="col-12">
 <div class="col-12 d-flex flex-wrap">
@@ -43,7 +47,7 @@
            @endforeach
            @else
        
-           <img src="{{asset('storage/photos_biens/default.jpg')}}" alt="" class="w-100 rounded" style="height:290px"/>
+           <img src="{{asset('storage/photos_biens/default.jpg')}}" alt="" class="w-100 rounded" style="height:200px"/>
        
         
         
@@ -138,6 +142,36 @@
             <div class="mb-1 pe-3 flex-grow-1">
               <a href="#" class="fs-6 text-gray-800  fw-bolder">Ville</a>
               <div class="text-gray-600 fw-bold fs-6">{{$bien->ville}}</div>
+            </div>
+            <!--end::Title-->
+            <!--begin::Label-->
+            
+            <!--end::Label-->
+          </div>
+          <!--end::Description-->
+        </div>
+            <div class="d-flex align-items-center mb-6">
+          <!--begin::Symbol-->
+          <div class="symbol symbol-30px w-20px me-5">
+            <span class="symbol-label bg-lighten">
+              <!--begin::Svg Icon | path: icons/duotone/Home/Globe.svg-->
+               <span class="svg-icon svg-icon-3">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+                                            </span>
+              <!--end::Svg Icon-->
+            </span>
+          </div>
+          <!--end::Symbol-->
+          <!--begin::Description-->
+          <div class="d-flex align-items-center flex-wrap w-100">
+            <!--begin::Title-->
+            <div class="mb-1 pe-3 flex-grow-1"> 
+              <a href="#" class="fs-6 text-gray-800  fw-bolder">Nom du proprietaire</a>
+              <div class="text-gray-600 fw-bold fs-6">
+              
+                {{$bien->proprietaire->nom}}</div>
             </div>
             <!--end::Title-->
             <!--begin::Label-->

@@ -78,7 +78,10 @@ class GalerieController extends Controller
    */
   public function destroy($id)
   {
+    $gallerie= Gallerie::findOrFail($id);
+    Gallerie::destroy($gallerie->id);
     
+    return redirect('/bien')->with('Message','La photo a bien été supprimé');
   }
   
 }

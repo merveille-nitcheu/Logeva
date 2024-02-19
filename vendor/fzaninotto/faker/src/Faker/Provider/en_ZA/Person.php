@@ -34,7 +34,7 @@ class Person extends \Faker\Provider\Person
         'Keith', 'Kenneth', 'Kevin', 'Kgomotso', 'Kobus', 'Kyle', 'Lawrence', 'Lee', 'Leon', 'Leonard', 'Lloyd', 'Louis',
         'Lucas ', 'Lucky', 'Malcolm', 'Mandla', 'Marc', 'Marco', 'Mario', 'Marius', 'Mark', 'Martin', 'Matthew', 'Mduduzi',
         'Michael', 'Mike', 'Mogamat', 'Mohamed', 'Mohammed', 'Morne', 'Morné', 'Moses', 'Mr. ', 'Muhammad', 'Musa', 'Nathan',
-        'Neil', 'Neo', 'Neville', 'Nicholas', 'Nick', 'Nico', 'Nigel', 'Nkululeko', 'Norman', 'Ntokozo', 'Patrick', 'Paul',
+        'Neil', 'Neo', 'Neville', 'Nicholas', 'Nick', 'Nico', 'Nigel', 'Nkqluleko', 'Norman', 'Ntokozo', 'Patrick', 'Paul',
         'Peter', 'Petrus', 'Philip', 'Phillip', 'Pierre', 'Pieter', 'Prince', 'Raymond', 'Rene', 'René', 'Riaan', 'Ricardo',
         'Richard', 'Rob', 'Robert', 'Rodney', 'Roger', 'Ronald', 'Roy', 'Rudi', 'Russell', 'Ryan', 'Sam', 'Samuel',
         'Sandile', 'Sean', 'Shane', 'Shaun', 'Shawn', 'Sibusiso', 'Simon', 'Simone', 'Simphiwe', 'Siphiwe', 'Sipho', 'Siyabonga',
